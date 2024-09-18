@@ -2,7 +2,7 @@ package test;
 
 import org.junit.jupiter.api.Test;
 
-import FactorialClasses.FactorialNoInterface;
+import Assignment.Factorial.FactorialClasses.FactorialNoInterface;
 
 import static org.junit.jupiter.api.Assertions.*;
 

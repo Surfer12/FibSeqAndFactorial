@@ -1,4 +1,4 @@
-package FactorialClasses;
+package Assignment.Factorial.FactorialClasses;
 
 import java.util.Iterator;
 import java.util.NoSuchElementException;

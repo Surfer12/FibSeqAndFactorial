@@ -1,4 +1,4 @@
-package FactorialClasses;
+package Assignment.Factorial.FactorialClasses;
 
 public class FactorialALt {
    private int number;
