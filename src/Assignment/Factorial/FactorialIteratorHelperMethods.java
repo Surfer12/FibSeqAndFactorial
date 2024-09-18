@@ -1,4 +1,4 @@
-package Assignment;
+package Assignment.Factorial;
 
 /* **Flowchart of the java code that impliements the iterator interface for factorial sequence.**
  */

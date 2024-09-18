@@ -3,8 +3,8 @@
  * This class provides methods to perform insertion sort and selection sort
  * on an array of integers, along with an analysis of their time complexity.
  */
-public class SortAlgorithms {
 
+public class SortAlgorithms {
     /**
      * Performs insertion sort on the given array.
      *
@@ -56,3 +56,5 @@ public class SortAlgorithms {
         System.out.println("Selection Sort: O(n^2) in all cases.");
     }
 }
+
+ 
