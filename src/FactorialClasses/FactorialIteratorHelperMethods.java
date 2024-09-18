@@ -1,4 +1,5 @@
 package FactorialClasses;
+
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
@@ -12,15 +13,18 @@ public class FactorialIteratorHelperMethods implements Iterator<Integer> {
 
     @Override
     public boolean hasNext() {
+        if (aNumberForFactorialCalculation <= 0) {
+            return false;
+        }
         return aNumberForFactorialCalculation >= aBaseCasePlaceHolder;
     }
 
     @Override
     public Integer next() {
         if (!hasNext()) {
-            throw new NoSuchElementException();
+            throw new NoSuchElementException("No more elements available as number is less than or equal to zero");
         }
-        return aBaseCasePlaceHolder * aNumberForFactorialCalculation--; // Corrected logic
+        return aBaseCasePlaceHolder * aNumberForFactorialCalculation--;
     }
 
     public int theFactorialOfTheNumberUsingRecursion() {
