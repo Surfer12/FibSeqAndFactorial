@@ -1,9 +1,9 @@
 package FactorialClasses;
 
-public class Factorial {
+public class FactorialNoInterface {
     private int number;
 
-    public Factorial(int number) {
+    public FactorialNoInterface(int number) {
         this.number = number;
     }
 
