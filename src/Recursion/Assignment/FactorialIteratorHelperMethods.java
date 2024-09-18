@@ -1,4 +1,7 @@
-package FactorialClasses;
+package Recursion.Assignment;
+
+/* **Flowchart of the java code that impliements the iterator interface for factorial sequence.**
+ */
 
 import java.util.Iterator;
 import java.util.NoSuchElementException;

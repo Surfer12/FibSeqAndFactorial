@@ -1,6 +1,9 @@
-package FactorialClasses;
+package test;
 
 import org.junit.jupiter.api.Test;
+
+import FactorialClasses.FactorialNoInterface;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 

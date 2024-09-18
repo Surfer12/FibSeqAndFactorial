@@ -1,6 +1,9 @@
-package FactorialClasses;
+package test;
 
 import org.junit.jupiter.api.Test;
+
+import FactorialClasses.FactorialIteratorHelperMethods;
+
 import static org.junit.jupiter.api.Assertions.*;
 import java.util.NoSuchElementException;
 
