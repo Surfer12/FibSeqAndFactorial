@@ -1,4 +1,4 @@
-
+package FactorialClasses;
 
 public class Factorial {
     private int number;
