@@ -6,7 +6,6 @@ import FactorialClasses.FactorialNoInterface;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-
 public class FactorialNoInterfaceTest {
 
    @Test
@@ -35,5 +34,20 @@ public class FactorialNoInterfaceTest {
       FactorialNoInterface factorial = new FactorialNoInterface(5);
       factorial.setNumber(10);
       assertEquals(10, factorial.getNumber(), "Number should be 10");
+   }
+
+   @Test
+   public void testNegativeNumber() {
+      FactorialNoInterface factorial = new FactorialNoInterface(-5);
+      assertThrows(IllegalArgumentException.class, () -> {
+         factorial.calculateFactorial();
+      }, "Factorial of a negative number should throw IllegalArgumentException");
+   }
+
+   @Test
+   public void testLargeNumber() {
+      FactorialNoInterface factorial = new FactorialNoInterface(20);
+      assertEquals(2432902008176640000L, factorial.calculateFactorial(),
+            "Factorial of 20 should be 2432902008176640000");
    }
 }
