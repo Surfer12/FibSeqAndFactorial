@@ -1,10 +1,10 @@
 package FactorialClasses;
 
-public class FactorialGhAlt {
+public class FactorialALt {
    private int number;
 
    // Constructor to initialize the number
-   public FactorialGhAlt(int number) {
+   public FactorialALt(int number) {
       this.number = number;
    }
 

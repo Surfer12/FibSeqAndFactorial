@@ -5,4 +5,9 @@
 **Display the result**
 
 **Use iterator and recursive method and compare and contrast.**
+```png
+
+![alt text](../Docs/FlowchartIteratorvsRecusionFactorial.png)
+
+```
 

@@ -1,4 +1,4 @@
-package Recursion.Assignment;
+package Assignment;
 
 /* **Flowchart of the java code that impliements the iterator interface for factorial sequence.**
  */
@@ -46,7 +46,7 @@ public class FactorialIteratorHelperMethods implements Iterator<Integer> {
 
     private int factorial(int n) {
         if (n == 0) {
-            return 1;
+            return 0;
         }
         return n * factorial(n - 1); // Corrected recursion
     }
