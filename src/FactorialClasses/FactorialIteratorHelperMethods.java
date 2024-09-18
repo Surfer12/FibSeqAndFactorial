@@ -2,11 +2,11 @@ package FactorialClasses;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
-public class FactorialIteratorEx3 implements Iterator<Integer> {
+public class FactorialIteratorHelperMethods implements Iterator<Integer> {
     private int aNumberForFactorialCalculation;
     private int aBaseCasePlaceHolder = 1;
 
-    public FactorialIteratorEx3(int aNumberForFactorialCalculation) {
+    public FactorialIteratorHelperMethods(int aNumberForFactorialCalculation) {
         this.aNumberForFactorialCalculation = aNumberForFactorialCalculation;
     }
 
@@ -36,7 +36,7 @@ public class FactorialIteratorEx3 implements Iterator<Integer> {
 
     public int theFactorialOfTheNumberUsingIterator() {
         aBaseCasePlaceHolder = 1; // Reset before calculation
-        Iterator<Integer> iterator = new FactorialIteratorEx3(aNumberForFactorialCalculation);
+        Iterator<Integer> iterator = new FactorialIteratorHelperMethods(aNumberForFactorialCalculation);
         while (iterator.hasNext()) {
             aBaseCasePlaceHolder *= iterator.next();
         }

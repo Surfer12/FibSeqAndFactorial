@@ -3,11 +3,11 @@ import java.util.Iterator;
 
 // next method, hasNext method, remove method
 //impliments iterator interface to calculate the factorial of a given number
-public class FactorialIteratorEx2 implements Iterator<Integer> {
+public class FactorialIteratorWithLogicErrorRef implements Iterator<Integer> {
     private int aNumberForFactorialCalculation;
     private int aBaseCasePlaceHolder = 1;
 
-    public FactorialIteratorEx2(int aNumberForFactorialCalculation) {
+    public FactorialIteratorWithLogicErrorRef(int aNumberForFactorialCalculation) {
         this.aNumberForFactorialCalculation = aNumberForFactorialCalculation;
     }
 
@@ -36,7 +36,7 @@ public class FactorialIteratorEx2 implements Iterator<Integer> {
     }
 
     public int theFactorialOfTheNumberUsingIterator() {
-        Iterator<Integer> iterator = new FactorialIteratorEx2(aNumberForFactorialCalculation);
+        Iterator<Integer> iterator = new FactorialIteratorWithLogicErrorRef(aNumberForFactorialCalculation);
         while (iterator.hasNext()) {
             aBaseCasePlaceHolder *= iterator.next();
         }
