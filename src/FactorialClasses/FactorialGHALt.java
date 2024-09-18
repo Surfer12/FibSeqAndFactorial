@@ -1,10 +1,10 @@
-package test;
+package FactorialClasses;
 
-public class FactorialWithHelperMethods {
+public class FactorialGhAlt {
    private int number;
 
    // Constructor to initialize the number
-   public FactorialWithHelperMethods(int number) {
+   public FactorialGhAlt(int number) {
       this.number = number;
    }
 
