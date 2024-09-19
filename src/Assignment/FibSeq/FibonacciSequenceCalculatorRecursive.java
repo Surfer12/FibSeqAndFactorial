@@ -39,10 +39,10 @@ package Assignment.FibSeq;
  * 
  */
 
-public class FibonacciSequenceCalculator {
+public class FibonacciSequenceCalculatorRecursive {
     private int specifiedIndex;
 
-    public FibonacciSequenceCalculator(int specifiedIndex) {
+    public FibonacciSequenceCalculatorRecursive(int specifiedIndex) {
         this.specifiedIndex = specifiedIndex;
     }
 
@@ -56,5 +56,11 @@ public class FibonacciSequenceCalculator {
 
     public int getFibonacciValueAtSpecifiedIndex() {
         return calculateFibonacciValueAt(specifiedIndex);
+    }
+
+    public static void main(String[] args) {
+        FibonacciSequenceCalculatorRecursive fib = new FibonacciSequenceCalculatorRecursive(10);
+        int valueRecursive = fib.getFibonacciValueAtSpecifiedIndex();
+        System.out.println("Fibonacci value at index " + fib.specifiedIndex + " using recursion: " + valueRecursive);
     }
 }
