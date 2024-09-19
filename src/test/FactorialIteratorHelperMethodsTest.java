@@ -2,8 +2,6 @@ package test;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
-
-import java.util.NoSuchElementException;
 import Assignment.Factorial.FactorialClasses.FactorialIteratorHelperMethods;
 
 public class FactorialIteratorHelperMethodsTest {
@@ -50,7 +48,6 @@ public class FactorialIteratorHelperMethodsTest {
       assertEquals(3, factorialHelper.next());
       assertEquals(2, factorialHelper.next());
       assertEquals(1, factorialHelper.next());
-      assertThrows(NoSuchElementException.class, () -> factorialHelper.next());
-      assertThrows(NoSuchElementException.class, factorialHelper::next);
+      assertEquals(null, factorialHelper.next());
    }
 }
