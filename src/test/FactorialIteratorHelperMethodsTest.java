@@ -1,11 +1,10 @@
 package test;
 
 import org.junit.jupiter.api.Test;
-
-import Assignment.Factorial.FactorialClasses.FactorialIteratorHelperMethods;
-
 import static org.junit.jupiter.api.Assertions.*;
+
 import java.util.NoSuchElementException;
+import Assignment.Factorial.FactorialClasses.FactorialIteratorHelperMethods;
 
 public class FactorialIteratorHelperMethodsTest {
 
