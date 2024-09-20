@@ -1,5 +1,5 @@
 package Assignment.SortAlgo;
-
+import java.util.Arrays;
 public class InsertionAndSelectionSort {
     /**
      * Performs insertion sort on the given array.
@@ -40,6 +40,15 @@ public class InsertionAndSelectionSort {
             }
         }
 
+        // Non-static methods
+        public void insertionSortInstance(int[] array) {
+            insertionSort(array); // Reuse of the static method implemented above
+        }
+
+        public void selectionSortInstance(int[] array) {
+            selectionSort(array); // Reuse of the static method implemented above
+        }
+
         /**
          * Analyzes the time complexity of the sorting algorithms.
          * 
@@ -47,8 +56,28 @@ public class InsertionAndSelectionSort {
          * Selection Sort: O(n^2) in all cases.
          */
 
-        public static void analyzeTimeComplexity() {
-            System.out.println("Insertion Sort: O(n^2) in the worst case, O(n) in the best case.");
-        System.out.println("Selection Sort: O(n^2) in all cases.");
+        public static void main(String[] args) {
+            // Demonstrating static usage
+            int[] staticArray1 = { 5, 2, 8, 1, 3 };
+            System.out.println("Static Insertion Sort:");
+            insertionSort(staticArray1);
+            System.out.println(Arrays.toString(staticArray1));
+
+            int[] staticArray2 = { 5, 2, 8, 1, 3 };
+            System.out.println("Static Selection Sort:");
+            selectionSort(staticArray2);
+            System.out.println(Arrays.toString(staticArray2));
+
+            // Demonstrating non-static usage
+            InsertionAndSelectionSort sorter = new InsertionAndSelectionSort();
+            int[] instanceArray1 = { 5, 2, 8, 1, 3 };
+            System.out.println("Instance Insertion Sort:");
+            sorter.insertionSortInstance(instanceArray1);
+            System.out.println(Arrays.toString(instanceArray1));
+
+            int[] instanceArray2 = { 5, 2, 8, 1, 3 };
+            System.out.println("Instance Selection Sort:");
+            sorter.selectionSortInstance(instanceArray2);
+            System.out.println(Arrays.toString(instanceArray2));
+        }
     }
-}

@@ -55,4 +55,23 @@ public class InsertionAndSelectionSortTest {
       InsertionAndSelectionSort.selectionSort(array);
       assertArrayEquals(expected, array);
    }
+
+      @Test
+      public void testInsertionSortInstance() {
+         int[] array = { 5, 2, 9, 1, 5, 6 };
+         int[] expected = { 1, 2, 5, 5, 6, 9 };
+         InsertionAndSelectionSort sorter = new InsertionAndSelectionSort();
+         sorter.insertionSortInstance(array);
+         assertArrayEquals(expected, array);
+      }
+
+      @Test
+      public void testSelectionSortInstance() {
+         int[] array = { 5, 2, 9, 1, 5, 6 };
+         int[] expected = { 1, 2, 5, 5, 6, 9 };
+         InsertionAndSelectionSort sorter = new InsertionAndSelectionSort();
+         sorter.selectionSortInstance(array);
+         assertArrayEquals(expected, array);
+      }
+   }
 }
