@@ -19,12 +19,12 @@ public class FactorialIterationMethods {
         return computeFactorialIteratively(inputNumber);
     }
 
-    private int computeFactorialIteratively(int number) {
+    private int computeFactorialIteratively(int aFactorialNumber) {
         int factorialResult = 1;
-        for (int currentMultiplier = 1; currentMultiplier <= number; currentMultiplier++) {
-            factorialResult *= currentMultiplier;
+        for (int theCurrentMultiplier = 1; theCurrentMultiplier <= aFactorialNumber; theCurrentMultiplier++) {
+            factorialResult *= theCurrentMultiplier;
         }
         return factorialResult;
     }
-}
 
+}
