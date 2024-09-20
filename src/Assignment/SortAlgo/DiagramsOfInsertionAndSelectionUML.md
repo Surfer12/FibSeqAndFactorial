@@ -36,11 +36,12 @@ int [] anArray = [5, 2, 8, 1, 3]
 Output Log:
 selectionSort(anArray)
 Original Array for Selection Sort: [5, 2, 8, 1, 3]
-Selection Sort - Starting index: 0
-Selection Sort - Current j: 1, Current minIndex: 1, Current array: [5, 2, 8, 1, 3]
-Selection Sort - Current j: 2, Current minIndex: 1, Current array: [5, 2, 8, 1, 3]
-Selection Sort - Current j: 3, Current minIndex: 3, Current array: [5, 2, 8, 1, 3]
-Selection Sort - Current j: 4, Current minIndex: 3, Current array: [5, 2, 8, 1, 3]
+Selection Sort - Starting index: 0 // i begins at 0
+Selection Sort - Current j: 1, Current minIndex: 1, Current array: [5, 2, 8, 1, 3] // j begins at 1, minIndex is incremented to 1
+Selection Sort - Current j: 2, Current minIndex: 1, Current array: [5, 2, 8, 1, 3] // inner loop continues until the end of the array (condition j < n)
+Selection Sort - Current j: 3, Current minIndex: 3, Current array: [5, 2, 8, 1, 3] // element value one is less than the current minIndex value so minIndex is set to the j index. Boolean swapped is set to true.
+Selection Sort - Current j: 4, Current minIndex: 3, Current array: [5, 2, 8, 1, 3] // j continues to the end of the array. 
+// This highlights why the time complexity of selection sort is O(n^2) as it has to iterate through the array entirely in the inner loop as each element [i] of the outer loop is compared to the all of the other elements of the array using the inner loop during each iteration of the outer loop.
 Selection Sort - Swapped elements at indices 0 and 3: [1, 2, 8, 5, 3]
 Selection Sort - Starting index: 1
 Selection Sort - Current j: 2, Current minIndex: 1, Current array: [1, 2, 8, 5, 3]
