@@ -4,7 +4,7 @@
 
 ### Sorting Algorithms: Technical and Code Analysis (Selection & Insertion Sort)
 
-#### **1. Insertion Sort (Java Implementation)**
+#### **1. Insertion Sort **
 
 **Insertion Sort** algorithm is intuitive and works by dividing the array into a sorted and an unsorted section. It repeatedly picks the next element from the unsorted section and inserts it into its correct position in the sorted section.
 
