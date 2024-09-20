@@ -1,9 +1,9 @@
 package Assignment.Factorial.FactorialClasses;
 
-public class FactorialCalculator {
+public class FactorialIterationMethods {
     private int inputNumber;
 
-    public FactorialCalculator(int inputNumber) {
+    public FactorialIterationMethods(int inputNumber) {
         this.inputNumber = inputNumber;
     }
 
