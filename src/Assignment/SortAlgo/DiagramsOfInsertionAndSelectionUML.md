@@ -1,22 +1,14 @@
+# UML and Sequence Diagrams for Insertion and Selection Sort
 
-### Combined UML and Sequence Diagram for Insertion Sort
+### UML Diagram for Insertion Sort
 
-#### Class Diagram
-```
-+-------------------------------+
-| InsertionAndSelectionSort     |
-+-------------------------------+
-| + insertionSort(array: int[]) |
-| + insertionSortInstance(array: int[]) |
-+-------------------------------+
+#### Output Log of the Insertion Sort Algorithm
+```java 
+int [] anArray = [5, 2, 8, 1, 3]
 ```
 
-#### Sequence Diagram with Output Log
 ```
-array1 = [5, 2, 8, 1, 3]
-```
-```
-insertionSort(array1)
+insertionSort(anArray)
 
 Output Log:
 Original Array for Insertion Sort: [5, 2, 8, 1, 3]
@@ -50,10 +42,10 @@ Sorted Array using Insertion Sort: [1, 2, 3, 5, 8]
 ```
 
 ```
-array1 = [5, 2, 8, 1, 3]
+anArray = [5, 2, 8, 1, 3]
 ```
 ```
-selectionSort(array1)
+selectionSort(anArray)
 Selection Sort - Starting index: 0
 Selection Sort - Current minIndex: 1, Current array: [5, 2, 8, 1, 3]
 Selection Sort - Current minIndex: 1, Current array: [5, 2, 8, 1, 3]
@@ -74,5 +66,3 @@ Selection Sort - Current minIndex: 3, Current array: [1, 2, 3, 5, 8]
 Selection Sort - Swapped elements at indices 3 and 3: [1, 2, 3, 5, 8]
 [1, 2, 3, 5, 8]
 ```
-
-This combined diagram provides a comprehensive view of the class structure, the sequence of method calls, and the detailed steps of the algorithms as they process the arrays.
