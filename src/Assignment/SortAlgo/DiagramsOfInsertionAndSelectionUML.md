@@ -5,9 +5,7 @@
 #### Output Log of the Insertion Sort Algorithm
 ```java 
 int [] anArray = [5, 2, 8, 1, 3]
-```
 
-```
 insertionSort(anArray)
 
 Output Log:
@@ -29,22 +27,13 @@ Insertion Sort - Array after inserting key: [1, 2, 3, 5, 8]
 Sorted Array using Insertion Sort: [1, 2, 3, 5, 8]
 ```
 
-### Combined UML and Sequence Diagram for Selection Sort
+### UML Diagram for Selection Sort
+#### Output Log of the Selection Sort Algorithm
 
-#### Class Diagram
-```
-+-------------------------------+
-| InsertionAndSelectionSort     |
-+-------------------------------+
-| + selectionSort(array: int[]) |
-| + selectionSortInstance(array: int[]) |
-+-------------------------------+
-```
+```java
+int [] anArray = [5, 2, 8, 1, 3]
 
-```
-anArray = [5, 2, 8, 1, 3]
-```
-```
+Output Log:
 selectionSort(anArray)
 Selection Sort - Starting index: 0
 Selection Sort - Current minIndex: 1, Current array: [5, 2, 8, 1, 3]
@@ -64,5 +53,5 @@ Selection Sort - Swapped elements at indices 2 and 4: [1, 2, 3, 5, 8]
 Selection Sort - Starting index: 3
 Selection Sort - Current minIndex: 3, Current array: [1, 2, 3, 5, 8]
 Selection Sort - Swapped elements at indices 3 and 3: [1, 2, 3, 5, 8]
-[1, 2, 3, 5, 8]
+Sorted Array using Selection Sort: [1, 2, 3, 5, 8]
 ```
