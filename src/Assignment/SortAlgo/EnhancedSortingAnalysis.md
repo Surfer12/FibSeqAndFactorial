@@ -238,13 +238,13 @@ Selection Sort - Swapped elements at indices 0 and 3: [1, 2, 8, 5, 3]
 Selection Sort - Starting index: 1
 Selection Sort - Current j: 2, Current minIndex: 1, Current array: [1, 2, 8, 5, 3]
 Selection Sort - Current j: 3, Current minIndex: 1, Current array: [1, 2, 8, 5, 3]
-Selection Sort - Current j: 4, Current minIndex: 1, Current array: [1, 2, 8, 5, 3]
+Selection Sort - Current j: 4, Current minIndex: 1, Current array: [1, 2, 8, 5, 3] // None to swap so j continues to the end of the array.
 Selection Sort - Starting index: 2
-Selection Sort - Current j: 3, Current minIndex: 3, Current array: [1, 2, 8, 5, 3]
+Selection Sort - Current j: 3, Current minIndex: 3, Current array: [1, 2, 8, 5, 3] // None to swap so j continues to the end of the array.
 Selection Sort - Current j: 4, Current minIndex: 4, Current array: [1, 2, 8, 5, 3]
-Selection Sort - Swapped elements at indices 2 and 4: [1, 2, 3, 5, 8]
+Selection Sort - Swapped elements at indices 2 and 4: [1, 2, 3, 5, 8]// Swap 
 Selection Sort - Starting index: 3
-Selection Sort - Current j: 4, Current minIndex: 3, Current array: [1, 2, 3, 5, 8]
+Selection Sort - Current j: 4, Current minIndex: 3, Current array: [1, 2, 3, 5, 8] // Swap
 Sorted Array using Selection Sort: [1, 2, 3, 5, 8]
 ```
 
@@ -252,9 +252,9 @@ Sorted Array using Selection Sort: [1, 2, 3, 5, 8]
 ### Error Handling and Edge Cases
 
 - **Null Handling**: Similar to Insertion Sort, this method throws an `IllegalArgumentException` for null inputs.
-- **Empty Array**: The algorithm handles empty arrays gracefully, as the outer loop will not execute.
-
+- **Empty Array**: The algorithm handles empty arrays gracefully, as the outer loop will not execute. 
 ### Performance Optimizations
+
 
 - **Minimizing Swaps**: The algorithm only performs a swap if a new minimum is found, reducing unnecessary operations.
 
