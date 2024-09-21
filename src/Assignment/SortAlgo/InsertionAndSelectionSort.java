@@ -6,18 +6,35 @@ public class InsertionAndSelectionSort {
 
     public static void insertionSort(int[] array) {
         if (array == null) {
-            throw new IllegalArgumentException("Array cannot be null");
+            throw new IllegalArgumentException("Array cannot be null"); // throws an exception if the array is null
         }
-        int n = array.length;
-        for (int i = 1; i < n; i++) {
-            int key = array[i];
-            int j = i - 1;
+        int n = array.length; // sets n to the length of the array
+
+        for (int i = 1; i < n; i++) { // sets i as 1, sets the condition for i to stop when it reaches n, which is the  
+                                      // total length of the array, and sets the increment of i by 1
+            int key = array[i]; // sets key as the value of the element at the current index of i
+            int j = i - 1; // sets j as i-1, which is the element one index behind i
+
+            // This code segment selects the current element to be inserted into the sorted
+            // subarray. The variable `key` holds the value to be inserted, while `j`
+            // represents the index of the last element in the sorted subarray.
 
             System.out.println("Insertion Sort - Key selected: " + key);
 
-            while (j >= 0 && array[j] > key) {
-                array[j + 1] = array[j];
-                j = j - 1;
+            while (j >= 0 && array[j] > key) {// A while loop is to run that will continue to run as long as the index of j is greater than or equal to zero and the value of the element at the current index of j is greater than the value of the key. i.e if it's in the incorrect natural order.
+                array[j + 1] = array[j]; // sets the value of the element at the current index of j to the value of the element at the current index of j+1. This effectively shifts the element at the current index of j to the right by one index to the current index value of the key.
+                // This loop shifts elements encountered that greater than `key` to the right until the condition of the while loop is no longer met.
+                // This means that the key value 
+                
+
+                j = j - 1; // decrements j by 1, this serves to ensure that the while loop will continue from the previous index 
+                // The while continues until an element less than or equal to `key` is found
+                // 
+
+
+
+
+
                 System.out.println("Insertion Sort - Array after shifting: " + Arrays.toString(array));
             }
             array[j + 1] = key;

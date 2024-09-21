@@ -9,19 +9,20 @@ int [] anArray = [5, 2, 8, 1, 3]
 insertionSort(anArray)
 
 Output Log:
-Original Array for Insertion Sort: [5, 2, 8, 1, 3]
+Original Array for Insertion Sort: [5, 2, 8, 1, 3] // j is set to five and key is set to two 
 Insertion Sort - Key selected: 2
-Insertion Sort - Array after shifting: [5, 5, 8, 1, 3]
-Insertion Sort - Array after inserting key: [2, 5, 8, 1, 3]
-Insertion Sort - Key selected: 8
-Insertion Sort - Array after inserting key: [2, 5, 8, 1, 3]
-Insertion Sort - Key selected: 1
-Insertion Sort - Array after shifting: [2, 5, 8, 8, 3]
-Insertion Sort - Array after shifting: [2, 5, 5, 8, 3]
-Insertion Sort - Array after shifting: [2, 2, 5, 8, 3]
-Insertion Sort - Array after inserting key: [1, 2, 5, 8, 3]
-Insertion Sort - Key selected: 3
-Insertion Sort - Array after shifting: [1, 2, 5, 8, 8]
+Insertion Sort - Array after shifting: [5, 5, 8, 1, 3] // while loop encounters the condition array[j] > key, so the value of the element at the current index of j is set to the value of the element at the current index of j+1. This effectively shifts the element at the current index of j to the right by one index to the current index value of the key. 
+// Two is shifted to the left and five is shifted to the right.
+Insertion Sort - Array after inserting key: [2, 5, 8, 1, 3] // the while loop ends and the value of the key is set to the value of the element at the current index of j+1. This completes the first incteration of the outer loop and i is incremented by one.
+Insertion Sort - Key selected: 8 // The next key is selected and the inner loop condition is checked.
+Insertion Sort - Array after inserting key: [2, 5, 8, 1, 3] // The inner loop condition is not met, since key is great than the value of the element at the current index of j, and the inner loop ends.
+Insertion Sort - Key selected: 1 // The next key is selected and the inner loop condition is checked.
+Insertion Sort - Array after shifting: [2, 5, 8, 8, 3] // Since the value of the key is less than the value of the element at the current index of j, the value of the element at the current index of j is set to the value of the element at the current index of j+1. This effectively shifts the element at the current index of j to the right by one index to the current index value of the key.
+Insertion Sort - Array after shifting: [2, 5, 5, 8, 3] // The key value is one. This value is less than all other elements in the array so it continues to shift to the beginnig of the array. 
+Insertion Sort - Array after shifting: [2, 2, 5, 8, 3] // All elements of array[j]  are greater than key so j is decremented by one each iteration of the inner loop and the key value is checked against the new array[j] value each time.
+Insertion Sort - Array after inserting key: [1, 2, 5, 8, 3] // J becomes -1 when the key reaches the beginning of the array and the while loop ends.
+Insertion Sort - Key selected: 3 // The next key index is selected by the outer loop
+Insertion Sort - Array after shifting: [1, 2, 5, 8, 8] // The inner loop array[j] is greater than key so the value of the element at the current index of j, which is one index before because j is decremented by one, set to the value of the element at the current index of j+1. This shifts the elements to the left and compares each element to the key value until the inner loop conditional is no longer met.
 Insertion Sort - Array after shifting: [1, 2, 5, 5, 8]
 Insertion Sort - Array after inserting key: [1, 2, 3, 5, 8]
 Sorted Array using Insertion Sort: [1, 2, 3, 5, 8]
