@@ -1,35 +1,37 @@
-package Assignment.SortAlgo;
+# UML and Sequence Diagrams for Insertion and Selection Sort
 
-import java.util.Arrays;
+### UML Diagram for Insertion Sort
 
-/**
- * This class provides implementations of the Insertion Sort and Selection Sort
- * algorithms.
- * It includes methods to sort an array of integers using these algorithms,
- * along with detailed
- * logging of the sorting process for educational purposes.
- */
+#### Output Log of the Insertion Sort Algorithm
+```java 
+int [] anArray = [5, 2, 8, 1, 3]
 
+insertionSort(anArray)
+
+Output Log:
+Original Array for Insertion Sort: [5, 2, 8, 1, 3] // j is set to five and key is set to two 
+Insertion Sort - Key selected: 2
+Insertion Sort - Array after shifting: [5, 5, 8, 1, 3] // while loop encounters the condition array[j] > key, so the value of the element at the current index of j is set to the value of the element at the current index of j+1. This effectively shifts the element at the current index of j to the right by one index to the current index value of the key. 
+// Two is shifted to the left and five is shifted to the right.
+Insertion Sort - Array after inserting key: [2, 5, 8, 1, 3] // the while loop ends and the value of the key is set to the value of the element at the current index of j+1. This completes the first incteration of the outer loop and i is incremented by one.
+Insertion Sort - Key selected: 8 // The next key is selected and the inner loop condition is checked.
+Insertion Sort - Array after inserting key: [2, 5, 8, 1, 3] // The inner loop condition is not met, since key is great than the value of the element at the current index of j, and the inner loop ends.
+Insertion Sort - Key selected: 1 // The next key is selected and the inner loop condition is checked.
+Insertion Sort - Array after shifting: [2, 5, 8, 8, 3] // Since the value of the key is less than the value of the element at the current index of j, the value of the element at the current index of j is set to the value of the element at the current index of j+1. This effectively shifts the element at the current index of j to the right by one index to the current index value of the key.
+Insertion Sort - Array after shifting: [2, 5, 5, 8, 3] // The key value is one. This value is less than all other elements in the array so it continues to shift to the beginnig of the array. 
+Insertion Sort - Array after shifting: [2, 2, 5, 8, 3] // All elements of array[j]  are greater than key so j is decremented by one each iteration of the inner loop and the key value is checked against the new array[j] value each time.
+Insertion Sort - Array after inserting key: [1, 2, 5, 8, 3] // J becomes -1 when the key reaches the beginning of the array and the while loop ends.
+Insertion Sort - Key selected: 3 // The next key index is selected by the outer loop
+Insertion Sort - Array after shifting: [1, 2, 5, 8, 8] // The inner loop array[j] is greater than key so the value of the element at the current index of j, which is one index before because j is decremented by one, set to the value of the element at the current index of j+1. This shifts the elements to the left and compares each element to the key value until the inner loop conditional is no longer met.
+Insertion Sort - Array after shifting: [1, 2, 5, 5, 8] // Key value continues to shift to the left until the inner loop conditional is no longer met.
+Insertion Sort - Array after inserting key: [1, 2, 3, 5, 8] // Key value is greater than the value of the element at the current index of j so the inner loop ends and the key value is set to the value of the element at the current index of j+1.
+Sorted Array using Insertion Sort: [1, 2, 3, 5, 8] 
+
+```
+
+
+```java
 public class InsertionAndSelectionSort {
-
-    /**
-     * Sorts the given array using the Insertion Sort algorithm.
-     *
-     * @param array the array to be sorted
-     * @throws IllegalArgumentException if the array is null
-     *
-     *                                  The Insertion Sort algorithm sorts an array
-     *                                  by building a sorted subarray one element at
-     *                                  a time.
-     *                                  It iterates through the array, selecting
-     *                                  each element (key) and inserting it into the
-     *                                  correct
-     *                                  position in the sorted subarray. The method
-     *                                  prints the key selected and the state of the
-     *                                  array
-     *                                  after each insertion for debugging purposes.
-     */
-
     public static void insertionSort(int[] array) {
         if (array == null) {
             throw new IllegalArgumentException("Array cannot be null"); // throws an exception if the array is null
@@ -71,26 +73,12 @@ public class InsertionAndSelectionSort {
             System.out.println("Insertion Sort - Array after inserting key: " + Arrays.toString(array));
         }
     }
-
-    /**
-     * /**
-     * Sorts the given array using the Selection Sort algorithm.
-     *
+  /**
+     * Sorts the given array using the selection sort algorithm.
+     * 
      * @param array the array to be sorted
      * @throws IllegalArgumentException if the array is null
-     *
-     *                                  The Selection Sort algorithm sorts an array
-     *                                  by repeatedly finding the minimum element
-     *                                  from the
-     *                                  unsorted part and putting it at the
-     *                                  beginning. It uses two nested loops to
-     *                                  iterate through the
-     *                                  array and swap elements as necessary. The
-     *                                  method prints the starting index, current
-     *                                  minimum index,
-     *                                  and the state of the array at each step of
-     *                                  the sorting process for debugging purposes.
-     *
+     * 
      *                                  The selection sort algorithm sorts an array
      *                                  by repeatedly finding the minimum element
      *                                  (considering ascending order) from the
@@ -173,52 +161,34 @@ public class InsertionAndSelectionSort {
             }
         }
     }
-
-    public void insertionSortInstance(int[] array) {
-        insertionSort(array);
-    }
-
-    public void selectionSortInstance(int[] array) {
-        selectionSort(array);
-    }
-
-    public static void analyzeTimeComplexity() {
-        System.out.println("Insertion Sort: O(n^2) in the worst case, O(n) in the best case.");
-        System.out.println("Selection Sort: O(n^2) in all cases.");
-    }
-
-    public static void main(String[] args) {
-        int[] array1 = { 5, 2, 8, 1, 3 };
-        System.out.println("Original Array for Insertion Sort: " + Arrays.toString(array1));
-        insertionSort(array1);
-        System.out.println("Sorted Array using Insertion Sort: " + Arrays.toString(array1));
-
-        int[] array2 = { 5, 2, 8, 1, 3 };
-        System.out.println("Original Array for Selection Sort: " + Arrays.toString(array2));
-        selectionSort(array2);
-        System.out.println("Sorted Array using Selection Sort: " + Arrays.toString(array2));
-
-        int[] staticArray1 = { 5, 2, 8, 1, 3 };
-        System.out.println("Static Insertion Sort:");
-        insertionSort(staticArray1);
-        System.out.println(Arrays.toString(staticArray1));
-
-        int[] staticArray2 = { 5, 2, 8, 1, 3 };
-        System.out.println("Static Selection Sort:");
-        selectionSort(staticArray2);
-        System.out.println(Arrays.toString(staticArray2));
-
-        InsertionAndSelectionSort sorter = new InsertionAndSelectionSort();
-        int[] instanceArray1 = { 5, 2, 8, 1, 3 };
-        System.out.println("Instance Insertion Sort:");
-        sorter.insertionSortInstance(instanceArray1);
-        System.out.println(Arrays.toString(instanceArray1));
-
-        int[] instanceArray2 = { 5, 2, 8, 1, 3 };
-        System.out.println("Instance Selection Sort:");
-        sorter.selectionSortInstance(instanceArray2);
-        System.out.println(Arrays.toString(instanceArray2));
-
-        analyzeTimeComplexity();
-    }
 }
+```
+    ### UML Diagram for Selection Sort
+#### Output Log of the Selection Sort Algorithm
+
+
+```java
+int [] anArray = [5, 2, 8, 1, 3]
+
+Output Log:
+selectionSort(anArray)
+Original Array for Selection Sort: [5, 2, 8, 1, 3]
+Selection Sort - Starting index: 0 // i begins at 0
+Selection Sort - Current j: 1, Current minIndex: 1, Current array: [5, 2, 8, 1, 3] // j begins at 1, minIndex is incremented to 1
+Selection Sort - Current j: 2, Current minIndex: 1, Current array: [5, 2, 8, 1, 3] // inner loop continues until the end of the array (condition j < n)
+Selection Sort - Current j: 3, Current minIndex: 3, Current array: [5, 2, 8, 1, 3] // element value one is less than the current minIndex value so minIndex is set to the j index. Boolean swapped is set to true.
+Selection Sort - Current j: 4, Current minIndex: 3, Current array: [5, 2, 8, 1, 3] // j continues to the end of the array. 
+// This highlights why the time complexity of selection sort is O(n^2) as it has to iterate through the array entirely in the inner loop as each element [i] of the outer loop is compared to the all of the other elements of the array using the inner loop during each iteration of the outer loop.
+Selection Sort - Swapped elements at indices 0 and 3: [1, 2, 8, 5, 3]
+Selection Sort - Starting index: 1
+Selection Sort - Current j: 2, Current minIndex: 1, Current array: [1, 2, 8, 5, 3]
+Selection Sort - Current j: 3, Current minIndex: 1, Current array: [1, 2, 8, 5, 3]
+Selection Sort - Current j: 4, Current minIndex: 1, Current array: [1, 2, 8, 5, 3]
+Selection Sort - Starting index: 2
+Selection Sort - Current j: 3, Current minIndex: 3, Current array: [1, 2, 8, 5, 3]
+Selection Sort - Current j: 4, Current minIndex: 4, Current array: [1, 2, 8, 5, 3]
+Selection Sort - Swapped elements at indices 2 and 4: [1, 2, 3, 5, 8]
+Selection Sort - Starting index: 3
+Selection Sort - Current j: 4, Current minIndex: 3, Current array: [1, 2, 3, 5, 8]
+Sorted Array using Selection Sort: [1, 2, 3, 5, 8]
+```

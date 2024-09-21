@@ -23,9 +23,10 @@ Insertion Sort - Array after shifting: [2, 2, 5, 8, 3] // All elements of array[
 Insertion Sort - Array after inserting key: [1, 2, 5, 8, 3] // J becomes -1 when the key reaches the beginning of the array and the while loop ends.
 Insertion Sort - Key selected: 3 // The next key index is selected by the outer loop
 Insertion Sort - Array after shifting: [1, 2, 5, 8, 8] // The inner loop array[j] is greater than key so the value of the element at the current index of j, which is one index before because j is decremented by one, set to the value of the element at the current index of j+1. This shifts the elements to the left and compares each element to the key value until the inner loop conditional is no longer met.
-Insertion Sort - Array after shifting: [1, 2, 5, 5, 8]
-Insertion Sort - Array after inserting key: [1, 2, 3, 5, 8]
-Sorted Array using Insertion Sort: [1, 2, 3, 5, 8]
+Insertion Sort - Array after shifting: [1, 2, 5, 5, 8] // Key value continues to shift to the left until the inner loop conditional is no longer met.
+Insertion Sort - Array after inserting key: [1, 2, 3, 5, 8] // Key value is greater than the value of the element at the current index of j so the inner loop ends and the key value is set to the value of the element at the current index of j+1.
+Sorted Array using Insertion Sort: [1, 2, 3, 5, 8] 
+
 ```
 
 ### UML Diagram for Selection Sort
